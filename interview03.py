@@ -23,6 +23,9 @@ for (int i = 0; i < k; i++) {
 If all assertions pass, then your solution will be accepted.
 """
 
+from typing import List
+
+
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         count = 1
