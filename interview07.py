@@ -25,4 +25,15 @@ class Solution:
         return max_profit
     
 
+# improved version
 
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        max_profit = 0
+        l = prices[0]
+        for price in prices:
+            if price < l:
+                l = price
+            else:
+                max_profit = max(max_profit, price - l)
+        return max_profit 
