@@ -34,4 +34,20 @@ class Solution:
                 evenOdd[i] = odd[oddCount]
                 oddCount += 1
         return evenOdd
+
+# Improved solution
+class Solution:
+    def sortEvenOdd(self, nums: List[int]) -> List[int]:
+        odd = sorted(nums[1::2], reverse=True)
+        even = sorted(nums[::2])
+
+        result = []
+
+        for i in range(len(nums)):
+            if i % 2 == 0:
+                result.append(even.pop(0))
+            else:
+                result.append(odd.pop(0))
+
+        return result
             
