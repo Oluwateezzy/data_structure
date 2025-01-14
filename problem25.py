@@ -55,3 +55,9 @@ class Solution:
 
 # The Bitwise AND solution is similar to the first solution but uses bitwise AND to check the least significant bit instead of modulo. This solution has a time complexity of O(log(n)) and a space complexity of O(1), making it less efficient than the Brian Kernighan’s Algorithm but still better than the first solution.
 
+print(11 & 1)
+print(11 >> 1)
+print(5 & 1)
+
+
+## >> is the right shift operator which shifts the bits of a number to the right by a specified number of positions. For example, 11 >> 1 shifts the bits of 11 to the right by 1 position, resulting in 5. The & operator performs a bitwise AND operation between two numbers, returning 1 if both bits are 1 and 0 otherwise. For example, 11 & 1 returns 1 because the least significant bit of 11 is 1.
