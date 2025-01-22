@@ -27,3 +27,5 @@ def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
     print(nums1.__repr__)
 
 merge([1,2,3,0,0,0], 3, [2,5,6], 3)
+
+# The merge function takes two sorted arrays nums1 and nums2, along with their lengths m and n, and merges them into a single sorted array. The function modifies the nums1 array in-place to store the merged result.
