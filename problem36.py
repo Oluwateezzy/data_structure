@@ -1,18 +1,14 @@
-from typing import List
-def minimumLargestDeliveryTime(delivery_times:List, k:int):
+def minimumLargestDeliveryTime(delivery_times, k):
     x = len(delivery_times) // k
-    newArr = []
-    res = []
+    arr = []
 
     if x == 1:
         return max(delivery_times)
-
+    
     for i in range(x):
-        res = delivery_times[i + x : x]
-        newArr.append(sum(res))
+        arr.append(sum(delivery_times[i : x + 1]))
 
-    return max(res)
+    return max(arr)
 
-
-minimumLargestDeliveryTime([7,2,5,10,8], 2)
-minimumLargestDeliveryTime([1, 4, 4], 3)
+print(minimumLargestDeliveryTime([7,2,5,10,8], 2))
+print(minimumLargestDeliveryTime([1,4,4], 3))
