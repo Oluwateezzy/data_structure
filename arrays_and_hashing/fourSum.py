@@ -52,4 +52,32 @@ class Solution:
                             res.append(solArr)
         return res
         
+
+"""
+Accepted Solution
+"""
+
+class Solution:
+    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
+        res = []
+        n = len(nums)
+        nums.sort()
+        for i in range(n):
+            for j in range(i+1, n):
+                left = j + 1
+                right = n - 1
+                while left < right:
+                    solArr = [nums[i], nums[j], nums[left], nums[right]]
+                    total = nums[i] + nums[j] + nums[left] + nums[right]
+                    if total < target:
+                        left += 1
+                    elif total > target:
+                        right -= 1
+                    else:
+                        if solArr not in res:
+                            res.append(solArr)
+                        left += 1
+                        right -= 1
+                
+        return res
         
